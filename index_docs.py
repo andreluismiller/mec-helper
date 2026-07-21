@@ -3,7 +3,7 @@ import json
 import numpy as np
 from tqdm.auto import tqdm
 
-from embeder import Embeder
+from embedder import Embedder
 from sqlitesearch import TextSearchIndex, VectorSearchIndex
 
 
@@ -33,14 +33,14 @@ texts = [build_passage_text(doc) for doc in documents]
 # ------------------------------------------------------------------
 # 3. Gera os embeddings em batches de 50
 # ------------------------------------------------------------------
-embeder = Embeder()  # usa models/Xenova/multilingual-e5-base por padrão
+embedder = Embedder()  # usa models/Xenova/multilingual-e5-base por padrão
 
 batch_size = 50
 vectors = []
 
 for i in tqdm(range(0, len(texts), batch_size)):
     batch = texts[i:i + batch_size]
-    batch_vectors = embeder.encode_batch(batch)  # já normalizado (ver embeder.py)
+    batch_vectors = embedder.encode_batch(batch)  # já normalizado (ver embedder.py)
     vectors.extend(batch_vectors)
 
 print(len(vectors))
