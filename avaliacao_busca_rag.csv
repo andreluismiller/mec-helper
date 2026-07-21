@@ -1,0 +1,4 @@
+Search Type,Hit Rate,Mean Reciprocal Rank (MRR)
+Textual,0.7205,0.5768
+Vectorial,0.5482,0.4332
+Hybrid,0.6821,0.5102
