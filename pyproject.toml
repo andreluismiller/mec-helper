@@ -10,9 +10,11 @@ dependencies = [
     "onnxruntime>=1.27.0",
     "openai>=2.46.0",
     "pandas>=3.0.3",
+    "psycopg[binary]>=3.3.4",
     "python-dotenv>=1.2.2",
     "requests>=2.34.2",
     "sqlitesearch>=0.1.2",
+    "streamlit>=1.60.0",
     "tokenizers>=0.23.1",
     "tqdm>=4.69.0",
 ]
