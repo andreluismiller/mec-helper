@@ -10,9 +10,9 @@ services:
     ports:
       - "${DB_PORT}:5432"
     volumes:
-      - volumes:
+      - pgdata:/var/lib/postgresql/data
+      # Atualize a linha abaixo apontando para a pasta src:
       - ./src/init.sql:/docker-entrypoint-initdb.d/init.sql
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
       - rag_network
 
